@@ -13,50 +13,50 @@ document.addEventListener('DOMContentLoaded', function() {
             pageLoader.style.display = 'none';
         }, 800);
     }, 2000);
-    
+
     // Custom Cursor
     const cursorDot = document.querySelector('.cursor-dot');
     const cursorOutline = document.querySelector('.cursor-outline');
-    
+
     document.addEventListener('mousemove', (e) => {
         cursorDot.style.left = `${e.clientX}px`;
         cursorDot.style.top = `${e.clientY}px`;
-        
+
         setTimeout(() => {
             cursorOutline.style.left = `${e.clientX}px`;
             cursorOutline.style.top = `${e.clientY}px`;
         }, 80);
     });
-    
+
     // Interactive cursor effects
     document.querySelectorAll('a, button, .skill-card, .project-card, .contact-item, .tool-card').forEach(element => {
         element.addEventListener('mouseenter', () => {
             cursorDot.style.width = '16px';
             cursorDot.style.height = '16px';
             cursorDot.style.backgroundColor = 'rgba(0, 217, 255, 0.5)';
-            
+
             cursorOutline.style.width = '60px';
             cursorOutline.style.height = '60px';
             cursorOutline.style.borderColor = 'rgba(0, 217, 255, 0.3)';
         });
-        
+
         element.addEventListener('mouseleave', () => {
             cursorDot.style.width = '8px';
             cursorDot.style.height = '8px';
             cursorDot.style.backgroundColor = 'var(--accent-color)';
-            
+
             cursorOutline.style.width = '40px';
             cursorOutline.style.height = '40px';
             cursorOutline.style.borderColor = 'var(--accent-color)';
         });
     });
-    
+
     // Navigation
     const nav = document.querySelector('.main-nav');
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
-    
+
     // Nav scroll effect
     window.addEventListener('scroll', () => {
         if (window.scrollY > 100) {
@@ -65,30 +65,30 @@ document.addEventListener('DOMContentLoaded', function() {
             nav.classList.remove('scrolled');
         }
     });
-    
+
     // Mobile nav toggle
     navToggle.addEventListener('click', () => {
         navToggle.classList.toggle('active');
         navMenu.classList.toggle('active');
     });
-    
+
     // Nav link click handler
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
-            
+
             // Update active link
             navLinks.forEach(l => l.classList.remove('active'));
             link.classList.add('active');
-            
+
             // Close mobile menu if open
             navToggle.classList.remove('active');
             navMenu.classList.remove('active');
-            
+
             // Smooth scroll to section
             const targetId = link.getAttribute('href');
             const targetSection = document.querySelector(targetId);
-            
+
             if (targetSection) {
                 window.scrollTo({
                     top: targetSection.offsetTop - 80,
@@ -97,15 +97,15 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
+
     // Particle Background for Hero Section
     const particlesContainer = document.getElementById('particles');
     const particleCount = 50;
-    
+
     for (let i = 0; i < particleCount; i++) {
         const particle = document.createElement('div');
         particle.classList.add('particle');
-        
+
         // Random properties
         const size = Math.random() * 5 + 2;
         const posX = Math.random() * 100;
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const opacity = Math.random() * 0.5 + 0.1;
         const animationDuration = Math.random() * 20 + 10;
         const animationDelay = Math.random() * 5;
-        
+
         // Apply styles
         particle.style.width = `${size}px`;
         particle.style.height = `${size}px`;
@@ -122,11 +122,11 @@ document.addEventListener('DOMContentLoaded', function() {
         particle.style.opacity = opacity;
         particle.style.animationDuration = `${animationDuration}s`;
         particle.style.animationDelay = `${animationDelay}s`;
-        
+
         // Add to container
         particlesContainer.appendChild(particle);
     }
-    
+
     // Add CSS for particles
     const particleStyle = document.createElement('style');
     particleStyle.textContent = `
@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     `;
     document.head.appendChild(particleStyle);
-    
+
     // Typing Animation
     const typingText = document.querySelector('.typing-text');
     const textLines = [
@@ -167,15 +167,15 @@ document.addEventListener('DOMContentLoaded', function() {
         'React.js Specialist',
         'Problem Solver'
     ];
-    
+
     let lineIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
     let isEnd = false;
-    
+
     function typeWriter() {
         const currentLine = textLines[lineIndex];
-        
+
         if (isDeleting) {
             typingText.textContent = currentLine.substring(0, charIndex - 1);
             charIndex--;
@@ -183,13 +183,13 @@ document.addEventListener('DOMContentLoaded', function() {
             typingText.textContent = currentLine.substring(0, charIndex + 1);
             charIndex++;
         }
-        
+
         if (!isDeleting && charIndex === currentLine.length) {
             isEnd = true;
             setTimeout(typeWriter, 1500);
             return;
         }
-        
+
         if (isDeleting && charIndex === 0) {
             isDeleting = false;
             lineIndex++;
@@ -197,27 +197,27 @@ document.addEventListener('DOMContentLoaded', function() {
                 lineIndex = 0;
             }
         }
-        
+
         const speed = isDeleting ? 50 : isEnd ? 100 : 100;
         setTimeout(typeWriter, speed);
-        
+
         if (isEnd) {
             isDeleting = true;
             isEnd = false;
         }
     }
-    
+
     // Start typing effect after page loads
     setTimeout(typeWriter, 1000);
-    
+
     // Animate stats counters
     const statNumbers = document.querySelectorAll('.stat-number');
-    
+
     function animateCounter(element) {
         const target = parseInt(element.getAttribute('data-count'));
         const increment = target / 100;
         let current = 0;
-        
+
         const timer = setInterval(() => {
             current += increment;
             if (current >= target) {
@@ -228,22 +228,22 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }, 20);
     }
-    
+
     // Animate skill progress bars
     const progressBars = document.querySelectorAll('.progress-bar');
-    
+
     function animateProgressBar(bar) {
         const targetWidth = bar.getAttribute('data-progress');
         bar.style.width = `${targetWidth}%`;
     }
-    
+
     // Intersection Observer for scroll animations
     const observerOptions = {
         root: null,
         rootMargin: '0px',
         threshold: 0.1
     };
-    
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -251,23 +251,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (entry.target.id === 'about') {
                     statNumbers.forEach(animateCounter);
                 }
-                
+
                 // Animate skill progress bars
                 if (entry.target.id === 'skills') {
                     progressBars.forEach(animateProgressBar);
                 }
-                
+
                 // Add fade-in class to elements
                 entry.target.classList.add('fade-in');
             }
         });
     }, observerOptions);
-    
+
     // Observe sections
     document.querySelectorAll('section').forEach(section => {
         observer.observe(section);
     });
-    
+
     // Add CSS for fade-in animation
     const fadeInStyle = document.createElement('style');
     fadeInStyle.textContent = `
@@ -294,22 +294,22 @@ document.addEventListener('DOMContentLoaded', function() {
         .fade-in .timeline-item:nth-child(3) { animation-delay: 0.4s; }
     `;
     document.head.appendChild(fadeInStyle);
-    
+
     // Contact Form Submission (UI only)
     const contactForm = document.getElementById('contactForm');
-    
+
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        
+
         // Get form values
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const subject = document.getElementById('subject').value;
         const message = document.getElementById('message').value;
-        
+
         // In a real implementation, you would send this data to a server
         // For this demo, we'll just show a success message
-        
+
         // Create success message
         const successMessage = document.createElement('div');
         successMessage.className = 'success-message';
@@ -318,7 +318,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <h3>Message Sent Successfully!</h3>
             <p>Thank you ${name}, I'll get back to you soon.</p>
         `;
-        
+
         // Add styles for success message
         const successStyle = document.createElement('style');
         successStyle.textContent = `
@@ -364,24 +364,24 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         `;
         document.head.appendChild(successStyle);
-        
+
         // Append and show success message
         document.body.appendChild(successMessage);
-        
+
         // Remove message after 3 seconds
         setTimeout(() => {
             successMessage.style.opacity = '0';
             successMessage.style.transform = 'translate(-50%, -50%) scale(0.8)';
-            
+
             setTimeout(() => {
                 document.body.removeChild(successMessage);
             }, 500);
         }, 3000);
-        
+
         // Reset form
         contactForm.reset();
     });
-    
+
     // Ripple effect for buttons
     document.querySelectorAll('.btn').forEach(button => {
         button.addEventListener('click', function(e) {
@@ -390,20 +390,20 @@ document.addEventListener('DOMContentLoaded', function() {
             const size = Math.max(rect.width, rect.height);
             const x = e.clientX - rect.left - size / 2;
             const y = e.clientY - rect.top - size / 2;
-            
+
             ripple.style.width = ripple.style.height = `${size}px`;
             ripple.style.left = `${x}px`;
             ripple.style.top = `${y}px`;
             ripple.classList.add('ripple-effect');
-            
+
             this.appendChild(ripple);
-            
+
             setTimeout(() => {
                 ripple.remove();
             }, 600);
         });
     });
-    
+
     // Add CSS for ripple effect
     const rippleStyle = document.createElement('style');
     rippleStyle.textContent = `
@@ -424,17 +424,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     `;
     document.head.appendChild(rippleStyle);
-    
+
     // Update active nav link based on scroll position
     function updateActiveNavLink() {
         const sections = document.querySelectorAll('section');
         const scrollPos = window.scrollY + 100;
-        
+
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
             const sectionId = section.getAttribute('id');
-            
+
             if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
                 navLinks.forEach(link => {
                     link.classList.remove('active');
@@ -445,10 +445,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    
+
     // Update active nav link on scroll
     window.addEventListener('scroll', updateActiveNavLink);
-    
+
     // Initialize
     updateActiveNavLink();
 });
