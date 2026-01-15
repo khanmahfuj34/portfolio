@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md Mahfuj Al Hossain Khan | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <div class="loader-container">
+            <div class="loader-circle"></div>
+            <div class="loader-text">LOADING PORTFOLIO</div>
+            <div class="loader-progress">
+                <div class="loader-progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cursor Effect -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">MAHFUJ</span>
+                <div class="logo-highlight"></div>
+            </div>
+
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active" data-index="0">
+                    <span class="nav-text">Home</span>
+                    <span class="nav-indicator"></span>
+                </a>
+                <a href="#about" class="nav-link" data-index="1">
+                    <span class="nav-text">About</span>
+                    <span class="nav-indicator"></span>
+                </a>
+                <a href="#skills" class="nav-link" data-index="2">
+                    <span class="nav-text">Skills</span>
+                    <span class="nav-indicator"></span>
+                </a>
+                <a href="#projects" class="nav-link" data-index="3">
+                    <span class="nav-text">Projects</span>
+                    <span class="nav-indicator"></span>
+                </a>
+                <a href="#tools" class="nav-link" data-index="4">
+                    <span class="nav-text">Tools</span>
+                    <span class="nav-indicator"></span>
+                </a>
+                <a href="#contact" class="nav-link" data-index="5">
+                    <span class="nav-text">Contact</span>
+                    <span class="nav-indicator"></span>
+                </a>
+            </div>
+
+            <div class="nav-toggle">
+                <div class="toggle-line"></div>
+                <div class="toggle-line"></div>
+                <div class="toggle-line"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="section hero-section">
+            <div class="particles-container" id="particles"></div>
+            <div class="section-container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <div class="hero-intro">Hello, I'm</div>
+                        <h1 class="hero-title">
+                            <span class="title-line">
+                                <span class="title-text">Md Mahfuj Al Hossain</span>
+                            </span>
+                            <span class="title-line">
+                                <span class="title-text">Khan</span>
+                            </span>
+                        </h1>
+                        <div class="hero-subtitle">
+                            <div class="subtitle-text">
+                                <span class="subtitle-line">
+                                    <span class="typing-text">Frontend Developer</span>
+                                <span class="cursor"></span>
+                                </span>
+                            </div>
+                            <div class="department">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>Department of Computer Science and Engineering</span>
+                            </div>
+                            <div class="institution">
+                                <i class="fas fa-university"></i>
+                                <span>Daffodil International University</span>
+                            </div>
+                        </div>
+
+                        <div class="hero-buttons">
+                            <a href="#contact" class="btn btn-primary">
+                                <span>Contact Me</span>
+                                <div class="btn-hover-effect"></div>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="#projects" class="btn btn-secondary">
+                                <span>View Projects</span>
+                                <div class="btn-hover-effect"></div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="hero-visual">
+                        <div class="visual-container">
+                            <div class="floating-card card-1">
+                                <div class="card-icon">
+                                    <i class="fab fa-js-square"></i>
+                                </div>
+                                <div class="card-text">JavaScript</div>
+                            </div>
+                            <div class="floating-card card-2">
+                                <div class="card-icon">
+                                    <i class="fab fa-react"></i>
+                                </div>
+                                <div class="card-text">React.js</div>
+                            </div>
+                            <div class="floating-card card-3">
+                                <div class="card-icon">
+                                    <i class="fab fa-html5"></i>
+                                </div>
+                                <div class="card-text">HTML5/CSS3</div>
+                            </div>
+                            <div class="code-visual">
+                                <div class="code-line"></div>
+                                <div class="code-line"></div>
+                                <div class="code-line"></div>
+                                <div class="code-line"></div>
+                                <div class="code-highlight"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scroll-indicator">
+                    <div class="scroll-text">Scroll Down</div>
+                    <div class="scroll-line">
+                        <div class="scroll-dot"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="title-number">01</span>
+                        <span class="title-text">About Me</span>
+                    </h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">Passionate frontend developer crafting exceptional digital experiences</p>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="about-paragraph">
+                            I'm a dedicated Computer Science and Engineering student at Daffodil International University with a strong focus on frontend development. My passion lies in creating intuitive, responsive, and visually appealing web applications that provide exceptional
+                            user experiences.
+                        </p>
+                        <p class="about-paragraph">
+                            With expertise in modern JavaScript, React.js, and responsive design principles, I build applications that are not only functional but also aesthetically pleasing. I enjoy transforming complex problems into simple, beautiful designs.
+                        </p>
+                        <p class="about-paragraph">
+                            When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or expanding my knowledge in UI/UX design principles to create even better digital experiences.
+                        </p>
+
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="25">0</div>
+                                <div class="stat-text">Projects Completed</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="15">0</div>
+                                <div class="stat-text">Happy Clients</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="1000">0</div>
+                                <div class="stat-text">Code Commits</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-visual">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title">Education</h3>
+                                    <p class="timeline-text">B.Sc. in Computer Science and Engineering at Daffodil International University</p>
+                                    <div class="timeline-date">2022 - Present</div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title">Frontend Development</h3>
+                                    <p class="timeline-text">Specializing in React.js, JavaScript, and modern CSS techniques</p>
+                                    <div class="timeline-date">2021 - Present</div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title">UI/UX Design</h3>
+                                    <p class="timeline-text">Creating intuitive and beautiful user interfaces with focus on user experience</p>
+                                    <div class="timeline-date">2022 - Present</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="title-number">02</span>
+                        <span class="title-text">Technical Skills</span>
+                    </h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">Mastering the tools and technologies that bring ideas to life</p>
+                </div>
+
+                <div class="skills-content">
+                    <div class="skills-category">
+                        <h3 class="category-title">Frontend Skills</h3>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fab fa-js"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4 class="skill-name">JavaScript (ES6+)</h4>
+                                    <div class="skill-progress">
+                                        <div class="progress-bar" data-progress="95"></div>
+                                    </div>
+                                    <div class="skill-percentage">95%</div>
+                                </div>
+                            </div>
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fab fa-react"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4 class="skill-name">React.js</h4>
+                                    <div class="skill-progress">
+                                        <div class="progress-bar" data-progress="90"></div>
+                                    </div>
+                                    <div class="skill-percentage">90%</div>
+                                </div>
+                            </div>
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4 class="skill-name">HTML5 & CSS3</h4>
+                                    <div class="skill-progress">
+                                        <div class="progress-bar" data-progress="98"></div>
+                                    </div>
+                                    <div class="skill-percentage">98%</div>
+                                </div>
+                            </div>
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4 class="skill-name">Responsive Design</h4>
+                                    <div class="skill-progress">
+                                        <div class="progress-bar" data-progress="96"></div>
+                                    </div>
+                                    <div class="skill-percentage">96%</div>
+                                </div>
+                            </div>
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fas fa-wind"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4 class="skill-name">Tailwind CSS</h4>
+                                    <div class="skill-progress">
+                                        <div class="progress-bar" data-progress="88"></div>
+                                    </div>
+                                    <div class="skill-percentage">88%</div>
+                                </div>
+                            </div>
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fas fa-server"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4 class="skill-name">REST API Integration</h4>
+                                    <div class="skill-progress">
+                                        <div class="progress-bar" data-progress="92"></div>
+                                    </div>
+                                    <div class="skill-percentage">92%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="title-number">03</span>
+                        <span class="title-text">Projects & Experience</span>
+                    </h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">Showcasing my work and professional journey</p>
+                </div>
+
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="image-placeholder"></div>
+                            <div class="project-overlay">
+                                <div class="project-tech">
+                                    <span>React</span>
+                                    <span>Tailwind</span>
+                                    <span>API</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">E-Commerce Dashboard</h3>
+                            <p class="project-description">A fully responsive admin dashboard for e-commerce analytics with real-time data visualization.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                    <span>Code</span>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>Live Demo</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="image-placeholder"></div>
+                            <div class="project-overlay">
+                                <div class="project-tech">
+                                    <span>React</span>
+                                    <span>Firebase</span>
+                                    <span>CSS3</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Task Management App</h3>
+                            <p class="project-description">A collaborative task management application with drag & drop functionality and real-time updates.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                    <span>Code</span>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>Live Demo</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="image-placeholder"></div>
+                            <div class="project-overlay">
+                                <div class="project-tech">
+                                    <span>JavaScript</span>
+                                    <span>HTML5</span>
+                                    <span>CSS3</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Portfolio Website</h3>
+                            <p class="project-description">A responsive portfolio website with glassmorphism design and smooth animations.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                    <span>Code</span>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>Live Demo</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools Section -->
+        <section id="tools" class="section tools-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="title-number">04</span>
+                        <span class="title-text">Tools & Software</span>
+                    </h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">The development ecosystem that powers my workflow</p>
+                </div>
+
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="tool-name">VS Code</h3>
+                        <p class="tool-desc">Primary code editor with custom extensions</p>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <i class="fab fa-git-alt"></i>
+                        </div>
+                        <h3 class="tool-name">Git & GitHub</h3>
+                        <p class="tool-desc">Version control and collaboration</p>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <i class="fab fa-chrome"></i>
+                        </div>
+                        <h3 class="tool-name">Chrome DevTools</h3>
+                        <p class="tool-desc">Debugging and performance testing</p>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                        <h3 class="tool-name">Node.js & npm</h3>
+                        <p class="tool-desc">Runtime environment & package management</p>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <i class="fas fa-paper-plane"></i>
+                        </div>
+                        <h3 class="tool-name">Postman</h3>
+                        <p class="tool-desc">API testing and development</p>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </div>
+                        <h3 class="tool-name">Netlify</h3>
+                        <p class="tool-desc">Static site deployment</p>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3 class="tool-name">Vercel</h3>
+                        <p class="tool-desc">Frontend deployment platform</p>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <i class="fab fa-figma"></i>
+                        </div>
+                        <h3 class="tool-name">Figma</h3>
+                        <p class="tool-desc">UI/UX design and prototyping</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="title-number">05</span>
+                        <span class="title-text">Get In Touch</span>
+                    </h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">Let's discuss opportunities or just say hello</p>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3 class="contact-title">Email</h3>
+                                <a href="mailto:mkmahfujkhanms@gmail.com" class="contact-link">mkmahfujkhanms@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3 class="contact-title">Phone</h3>
+                                <a href="tel:01622730***" class="contact-link">+880 1622 730***</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3 class="contact-title">LinkedIn</h3>
+                                <a href="https://www.linkedin.com/in/md-mahfuj-al-hossain-khan-377835349" target="_blank" class="contact-link">Md Mahfuj Al Hossain Khan</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3 class="contact-title">GitHub</h3>
+                                <a href="https://github.com/khanmahfuj34" target="_blank" class="contact-link">github.com/khanmahfuj34</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <form id="contactForm" class="form">
+                            <div class="form-group">
+                                <input type="text" id="name" placeholder="Your Name" required>
+                                <div class="form-line"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="email" id="email" placeholder="Your Email" required>
+                                <div class="form-line"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" id="subject" placeholder="Subject" required>
+                                <div class="form-line"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                                <div class="form-line"></div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary form-submit">
+                                <span>Send Message</span>
+                                <div class="btn-hover-effect"></div>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <span class="logo-text">MAHFUJ</span>
+                    <div class="logo-highlight"></div>
+                </div>
+
+                <div class="footer-text">
+                    <p>© 2023 Md Mahfuj Al Hossain Khan. All rights reserved.</p>
+                    <p>Designed and developed with passion for frontend excellence.</p>
+                </div>
+
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/md-mahfuj-al-hossain-khan-377835349" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/khanmahfuj34" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:mkmahfujkhanms@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
